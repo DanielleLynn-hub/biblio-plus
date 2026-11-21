@@ -10,7 +10,7 @@ const featured = ref([
 </script>
 
 <template>
-  <h1>Biblio+</h1>
+  <h1>Biblio+ · Bibliothèque municipale</h1>
   <input v-model="query" type="search" placeholder="Titre, auteur…" />
   <p>Recherche en cours : {{ query }}</p>
 
