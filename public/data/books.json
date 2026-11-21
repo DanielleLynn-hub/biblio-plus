@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Le Petit Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "category": "Roman",
+    "year": 1943,
+    "available": true,
+    "cover": "/covers/petit-prince.jpg",
+    "summary": "Un aviateur échoué dans le désert rencontre un petit prince."
+  },
+  {
+    "id": 2,
+    "title": "Germinal",
+    "author": "Émile Zola",
+    "category": "Roman",
+    "year": 1885,
+    "available": false,
+    "cover": "/covers/germinal.jpg",
+    "summary": "La vie et la révolte des mineurs dans le nord de la France."
+  },
+  {
+    "id": 3,
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "category": "Roman",
+    "year": 1862,
+    "available": true,
+    "cover": "/covers/les-miserables.jpg",
+    "summary": "Le destin de Jean Valjean, ancien forçat en quête de rédemption."
+  },
+  {
+    "id": 4,
+    "title": "L'Étranger",
+    "author": "Albert Camus",
+    "category": "Roman",
+    "year": 1942,
+    "available": true,
+    "cover": "/covers/etranger.jpg",
+    "summary": "Meursault, un homme indifférent, est jugé pour un meurtre à Alger."
+  },
+  {
+    "id": 5,
+    "title": "Harry Potter à l'école des sorciers",
+    "author": "J. K. Rowling",
+    "category": "Jeunesse",
+    "year": 1997,
+    "available": false,
+    "cover": "/covers/harry-potter.jpg",
+    "summary": "Un orphelin découvre qu'il est un sorcier et entre à Poudlard."
+  },
+  {
+    "id": 6,
+    "title": "Le Petit Nicolas",
+    "author": "René Goscinny",
+    "category": "Jeunesse",
+    "year": 1960,
+    "available": true,
+    "cover": "/covers/petit-nicolas.jpg",
+    "summary": "Les bêtises et les aventures d'un écolier et de ses copains."
+  },
+  {
+    "id": 7,
+    "title": "Matilda",
+    "author": "Roald Dahl",
+    "category": "Jeunesse",
+    "year": 1988,
+    "available": true,
+    "cover": "/covers/matilda.jpg",
+    "summary": "Une fillette surdouée aux pouvoirs surprenants affronte la terrible directrice."
+  },
+  {
+    "id": 8,
+    "title": "Vendredi ou la Vie sauvage",
+    "author": "Michel Tournier",
+    "category": "Jeunesse",
+    "year": 1971,
+    "available": false,
+    "cover": "/covers/vendredi.jpg",
+    "summary": "Une réécriture de Robinson Crusoé destinée aux jeunes lecteurs."
+  },
+  {
+    "id": 9,
+    "title": "Sapiens : une brève histoire de l'humanité",
+    "author": "Yuval Noah Harari",
+    "category": "Documentaire",
+    "year": 2011,
+    "available": true,
+    "cover": "/covers/sapiens.jpg",
+    "summary": "Une histoire de l'espèce humaine, des chasseurs-cueilleurs à nos jours."
+  },
+  {
+    "id": 10,
+    "title": "Une brève histoire du temps",
+    "author": "Stephen Hawking",
+    "category": "Documentaire",
+    "year": 1988,
+    "available": true,
+    "cover": "/covers/histoire-du-temps.jpg",
+    "summary": "Une introduction accessible à la cosmologie et aux trous noirs."
+  },
+  {
+    "id": 11,
+    "title": "Le Deuxième Sexe",
+    "author": "Simone de Beauvoir",
+    "category": "Documentaire",
+    "year": 1949,
+    "available": false,
+    "cover": "/covers/deuxieme-sexe.jpg",
+    "summary": "Essai fondateur sur la condition des femmes."
+  },
+  {
+    "id": 12,
+    "title": "Les Origines du totalitarisme",
+    "author": "Hannah Arendt",
+    "category": "Documentaire",
+    "year": 1951,
+    "available": true,
+    "cover": "/covers/totalitarisme.jpg",
+    "summary": "Analyse de l'antisémitisme, de l'impérialisme et des régimes totalitaires."
+  }
+]
