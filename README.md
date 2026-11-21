@@ -1,5 +1,10 @@
 # biblio-plus
 
+Site de la bibliothèque municipale Biblio+ (Vue 3 + Vite).
+
+- Site en ligne : https://biblio-plus-zjol.netlify.app
+- Dépôt : https://github.com/DanielleLynn-hub/biblio-plus
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
