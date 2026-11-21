@@ -78,11 +78,11 @@ Légende : **Must** indispensable · **Should** important · **Could** souhaitab
 
 ## 3. Maquettes Figma à réaliser
 
-Wireframes : structure et hiérarchie seulement, sans couleurs ni images (gris et blocs étiquetés).
+Fichiers SVG importables dans Figma : `docs/maquettes/`. Style chaleureux « bibliothèque » : bordeaux `#7A1F2B`, crème `#FBF5EA`, or `#B8872B`, titres en Georgia (empattements), texte en Arial. Les statuts combinent couleur, icône et texte, pour ne pas reposer sur la couleur seule.
 
-1. **Accueil** : en-tête (logo « Biblio+ », menu Accueil / Catalogue / Contact), bandeau de titre avec champ de recherche, bloc « Livres à la une » (3 cartes), bloc « Prochains événements », pied de page.
-2. **Catalogue** : même en-tête, champ de recherche, filtre par catégorie, grille de cartes (titre, auteur, statut « Disponible / Emprunté »), message « aucun résultat ».
-3. **Contact** : même en-tête, formulaire (nom, e-mail, message, bouton Envoyer), message d'erreur et de confirmation, coordonnées et horaires.
+1. **Accueil** : en-tête (logo, menu Accueil / Catalogue / Contact, boutons de taille de texte), bandeau d'accroche avec recherche, chiffres clés, catégories, « Livres à la une » (4 cartes), « Prochains événements », bandeau accessibilité, pied de page.
+2. **Catalogue** : bandeau de titre avec recherche, filtres latéraux (catégorie, disponibilité, tri), grille de cartes (couverture, titre, auteur, catégorie et année, statut), état « aucun résultat ».
+3. **Contact** : formulaire (nom, e-mail, sujet, message) avec états d'erreur et de confirmation, coordonnées, horaires d'ouverture et plan d'accès.
 
 **Prototype v1** : relier Accueil → Catalogue → Contact (menu et boutons).
 **Version 2** : tester avec 3 utilisateurs, noter leurs retours, puis corriger la maquette.
