@@ -6,8 +6,8 @@
 </template>
 
 <style scoped>
-.app-footer { margin-top: var(--space-8); padding: var(--space-6); text-align: center;
-  background: var(--color-ink); color: var(--color-on-ink); }
+.app-footer { padding: var(--space-6) var(--gutter); text-align: center;
+  background: var(--color-ink); color: var(--color-on-ink); border-top: 3px solid var(--color-accent); }
 .app-footer p { margin: var(--space-1) 0; }
 .app-footer a { color: inherit; }
 .app-footer :focus-visible { outline-color: var(--color-on-ink); }

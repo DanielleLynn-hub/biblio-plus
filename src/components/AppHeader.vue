@@ -19,13 +19,14 @@ const { count } = useFavorites()
 
 <style scoped>
 .app-header { display: flex; justify-content: space-between; align-items: center;
-  padding: var(--space-4) var(--space-8); background: var(--color-surface);
-  color: var(--color-ink); border-bottom: 1px solid var(--color-border); }
+  padding: var(--space-4) var(--gutter); background: var(--color-ink); color: var(--color-on-ink);
+  border-bottom: 3px solid var(--color-accent); }
 .app-header a { color: inherit; text-decoration: none; }
 .app-header__logo { font-family: var(--font-title); font-size: var(--fs-600); font-weight: 700;
-  letter-spacing: 0.02em; }
+  letter-spacing: 0.02em; color: #ffffff; }
 .app-header__nav { display: flex; gap: var(--space-6); list-style: none; margin: 0; padding: 0; }
 .app-header__nav a { padding-bottom: var(--space-1); border-bottom: 2px solid transparent; }
 .app-header__nav a:hover { border-bottom-color: var(--color-lavender); }
-.app-header__nav a.router-link-exact-active { font-weight: 700; border-bottom-color: var(--color-accent); }
+.app-header__nav a.router-link-exact-active { font-weight: 700; color: #ffffff; border-bottom-color: var(--color-accent); }
+.app-header :focus-visible { outline-color: var(--color-on-ink); }
 </style>

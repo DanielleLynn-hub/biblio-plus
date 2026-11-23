@@ -20,6 +20,7 @@ onMounted(load)
 
 <template>
   <section class="hero">
+    <p class="hero__eyebrow">Bibliothèque municipale</p>
     <h1>Bienvenue à la bibliothèque</h1>
     <p>Trouvez un livre en quelques secondes et vérifiez s’il est disponible avant de venir.</p>
     <SearchBar v-model="query" />
@@ -37,7 +38,10 @@ onMounted(load)
 </template>
 
 <style scoped>
-.hero { padding: var(--space-8) var(--space-8) calc(var(--space-8) * 1.5); background: var(--color-brand);
-  color: var(--color-on-brand); }
-.hero h1 { font-size: var(--fs-800); margin: 0 0 var(--space-2); }
+.hero { padding: calc(var(--space-8) * 1.5) var(--gutter); color: #fbeaf0;
+  background: linear-gradient(135deg, var(--color-ink) 0%, var(--color-ink-soft) 100%); }
+.hero__eyebrow { margin: 0 0 var(--space-2); color: var(--color-accent); font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.875rem; }
+.hero h1 { font-size: var(--fs-800); margin: 0 0 var(--space-2); color: #ffffff; }
+.hero p { max-width: 38rem; }
 </style>

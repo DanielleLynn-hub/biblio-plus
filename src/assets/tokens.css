@@ -1,19 +1,20 @@
 /* Design tokens : palette sobre, rose / lavande / corail en touches */
 :root {
-  --color-bg: #fdf8fa; /* blanc rosé très léger */
+  --color-bg: #fbeaf0; /* rose très clair, dérivé de #f5d5e0 */
   --color-surface: #ffffff;
   --color-brand: #f5d5e0; /* rose : bandeau d'accueil */
   --color-on-brand: #2b1d3a;
   --color-ink: #2b1d3a; /* prune très sombre : texte, pied de page */
   --color-on-ink: #f5d5e0;
+  --color-ink-soft: #4a3b75; /* dégradé du bandeau */
   --color-primary: #4a3b75; /* prune : boutons, liens, focus (contraste AA) */
   --color-primary-contrast: #ffffff;
   --color-lavender: #ab9fc9; /* décoratif */
-  --color-tint: #f3f0f8; /* lavande très pâle : fond des couvertures */
+  --color-tint: #ece7f6; /* lavande pâle : fond des couvertures */
   --color-accent: #eb9392; /* corail : filets et soulignements */
   --color-text: #2b1d3a;
   --color-muted: #594a66;
-  --color-border: #eadce3;
+  --color-border: #efcfdc;
   --color-success: #17604a;
   --color-danger: #a11f18;
 
@@ -29,6 +30,7 @@
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
-  --radius: 0.5rem;
+  --radius: 0.75rem;
+  --gutter: max(var(--space-6), calc((100% - 70rem) / 2 + var(--space-6)));
   --shadow: 0 1px 3px rgba(43, 29, 58, 0.08), 0 6px 18px rgba(43, 29, 58, 0.06);
 }
