@@ -3,6 +3,7 @@ import { ref, computed, watch, onMounted } from 'vue'
 import { useBooks } from '@/composables/useBooks'
 import { useFavorites } from '@/composables/useFavorites'
 import BookList from '@/components/BookList.vue'
+import BookListSkeleton from '@/components/BookListSkeleton.vue'
 import BaseButton from '@/components/BaseButton.vue'
 
 const { books, loading, error, load } = useBooks()
@@ -59,7 +60,7 @@ watch([query, category, sort], () => (page.value = 1))
       </div>
     </div>
 
-    <p v-if="loading" role="status">Chargement…</p>
+    <BookListSkeleton v-if="loading" />
     <div v-else-if="error" role="alert">
       <p>{{ error }}</p>
       <BaseButton @click="load">Réessayer</BaseButton>

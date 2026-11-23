@@ -10,6 +10,7 @@ const book = computed(() => books.value.find((b) => b.id === Number(props.id)))
 
 onMounted(async () => {
   await load()
+  if (book.value) document.title = book.value.title + ' · Biblio+'
   if (!book.value) router.replace({ name: 'not-found' })
 })
 </script>

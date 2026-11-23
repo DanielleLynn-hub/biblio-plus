@@ -4,6 +4,7 @@ import { useBooks } from '@/composables/useBooks'
 import { useFavorites } from '@/composables/useFavorites'
 import SearchBar from '@/components/SearchBar.vue'
 import BookList from '@/components/BookList.vue'
+import BookListSkeleton from '@/components/BookListSkeleton.vue'
 
 const { books, loading, error, load } = useBooks()
 const query = ref('')
@@ -27,7 +28,7 @@ onMounted(load)
   </section>
   <section class="page" aria-labelledby="coeur">
     <h2 id="coeur">Coups de cœur</h2>
-    <p v-if="loading" role="status">Chargement…</p>
+    <BookListSkeleton v-if="loading" />
     <div v-else-if="error" role="alert">
       <p>{{ error }}</p>
       <button type="button" @click="load">Réessayer</button>
