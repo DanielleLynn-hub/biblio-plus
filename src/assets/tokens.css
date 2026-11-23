@@ -31,6 +31,7 @@
   --space-6: 1.5rem;
   --space-8: 2rem;
   --radius: 0.75rem;
+  --header-h: 4.5rem;
   --gutter: max(var(--space-6), calc((100% - 70rem) / 2 + var(--space-6)));
   --shadow: 0 1px 3px rgba(43, 29, 58, 0.08), 0 6px 18px rgba(43, 29, 58, 0.06);
 }

@@ -38,10 +38,14 @@ onMounted(load)
 </template>
 
 <style scoped>
-.hero { padding: calc(var(--space-8) * 1.5) var(--gutter); color: #fbeaf0;
+.hero { padding: var(--space-6) var(--gutter); color: #fbeaf0;
   background: linear-gradient(135deg, var(--color-ink) 0%, var(--color-ink-soft) 100%); }
 .hero__eyebrow { margin: 0 0 var(--space-2); color: var(--color-accent); font-weight: 700;
   letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.875rem; }
 .hero h1 { font-size: var(--fs-800); margin: 0 0 var(--space-2); color: #ffffff; }
 .hero p { max-width: 38rem; }
+@media (min-width: 48rem) and (min-height: 40rem) {
+  /* L'en-tête et le bandeau restent visibles : seule la liste défile dessous */
+  .hero { position: sticky; top: var(--header-h); z-index: 10; }
+}
 </style>
