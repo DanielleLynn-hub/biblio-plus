@@ -86,7 +86,7 @@
     "category": "Documentaire",
     "year": 2011,
     "available": true,
-    "cover": "/covers/sapiens.svg",
+    "cover": "/covers/sapiens.png",
     "summary": "Une histoire de l'espèce humaine, des chasseurs-cueilleurs à nos jours."
   },
   {
@@ -96,17 +96,17 @@
     "category": "Documentaire",
     "year": 1988,
     "available": true,
-    "cover": "/covers/histoire-du-temps.svg",
+    "cover": "/covers/histoire-du-temps.png",
     "summary": "Une introduction accessible à la cosmologie et aux trous noirs."
   },
   {
     "id": 11,
-    "title": "Le Deuxième Sexe",
+    "title": "Le Deuxième Sexe, tome I",
     "author": "Simone de Beauvoir",
     "category": "Documentaire",
     "year": 1949,
     "available": false,
-    "cover": "/covers/deuxieme-sexe.svg",
+    "cover": "/covers/deuxieme-sexe.png",
     "summary": "Essai fondateur sur la condition des femmes."
   },
   {
@@ -116,7 +116,17 @@
     "category": "Documentaire",
     "year": 1951,
     "available": true,
-    "cover": "/covers/totalitarisme.svg",
+    "cover": "/covers/totalitarisme.png",
     "summary": "Analyse de l'antisémitisme, de l'impérialisme et des régimes totalitaires."
+  },
+  {
+    "id": 13,
+    "title": "Le Deuxième Sexe, tome II",
+    "author": "Simone de Beauvoir",
+    "category": "Documentaire",
+    "year": 1949,
+    "available": true,
+    "cover": "/covers/deuxieme-sexe-2.png",
+    "summary": "Tome II : « L'expérience vécue », où Simone de Beauvoir analyse la condition des femmes à chaque étape de leur vie."
   }
 ]

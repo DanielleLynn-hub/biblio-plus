@@ -31,7 +31,7 @@ const emit = defineEmits(['toggle-favorite'])
 <style scoped>
 .book-card { background: var(--color-surface); border-radius: var(--radius);
   box-shadow: var(--shadow); overflow: hidden; height: 100%; }
-.book-card__cover { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover;
+.book-card__cover { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: contain;
   background: var(--color-border); }
 .book-card__body { padding: var(--space-4); }
 .book-card__title { margin: 0 0 var(--space-1); font-size: var(--fs-300); }
