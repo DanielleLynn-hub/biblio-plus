@@ -54,3 +54,12 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+## Storybook (documentation des composants)
+
+```sh
+npm run storybook        # http://localhost:6006
+npm run build-storybook  # version statique dans storybook-static/
+```
+
+Les composants documentés : BaseButton, BaseCard, BookCard, BookList, BookListSkeleton, SearchBar. La barre d'outils permet de basculer entre thème clair et sombre.
