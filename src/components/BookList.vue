@@ -9,8 +9,8 @@ defineEmits(['toggle-favorite'])
 
 <template>
   <ul class="book-list">
-    <li v-for="book in books" :key="book.id">
-      <BookCard :book="book" :favorite="favorites.includes(book.id)"
+    <li v-for="(book, index) in books" :key="book.id">
+      <BookCard :book="book" :favorite="favorites.includes(book.id)" :eager="index < 2"
         @toggle-favorite="$emit('toggle-favorite', $event)" />
     </li>
   </ul>

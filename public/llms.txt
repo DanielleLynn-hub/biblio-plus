@@ -1,0 +1,9 @@
+# Biblio+
+
+> Site de la bibliothèque municipale : catalogue de livres, recherche, favoris et formulaire de contact.
+
+## Pages
+
+- [Accueil](https://biblio-plus-zjol.netlify.app/): recherche et coups de cœur
+- [Catalogue](https://biblio-plus-zjol.netlify.app/catalogue): tous les livres, avec filtres et tri
+- [Contact](https://biblio-plus-zjol.netlify.app/contact): formulaire de contact

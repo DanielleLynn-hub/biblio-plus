@@ -39,9 +39,10 @@ onMounted(load)
 </template>
 
 <style scoped>
-.hero { padding: calc(var(--space-8) * 1.5) var(--gutter); color: #fbeaf0;
-  background-color: var(--color-ink);
-  background-image: linear-gradient(135deg, var(--color-ink) 0%, var(--color-ink-soft) 100%); }
+.hero { position: relative; isolation: isolate; padding: calc(var(--space-8) * 1.5) var(--gutter);
+  color: #fbeaf0; background-color: var(--color-ink); }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(135deg, transparent 0%, var(--color-ink-soft) 100%); }
 .hero__eyebrow { margin: 0 0 var(--space-2); color: var(--color-accent); font-weight: 700;
   letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.875rem; }
 .hero h1 { font-size: var(--fs-800); margin: 0 0 var(--space-2); color: #ffffff; }

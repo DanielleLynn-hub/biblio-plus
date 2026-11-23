@@ -4,6 +4,7 @@ import BaseCard from './BaseCard.vue'
 defineProps({
   book: { type: Object, required: true },
   favorite: { type: Boolean, default: false },
+  eager: { type: Boolean, default: false }, // première(s) couverture(s) : pas de chargement différé
 })
 const emit = defineEmits(['toggle-favorite'])
 </script>
@@ -12,7 +13,7 @@ const emit = defineEmits(['toggle-favorite'])
   <BaseCard>
     <template #media>
       <img class="book-card__cover" :src="book.cover" width="200" height="300"
-        :alt="'Couverture de ' + book.title" loading="lazy" />
+        :alt="'Couverture de ' + book.title" :loading="eager ? 'eager' : 'lazy'" />
     </template>
     <h3 class="book-card__title">
       <RouterLink :to="{ name: 'book', params: { id: book.id } }">{{ book.title }}</RouterLink>
