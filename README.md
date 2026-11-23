@@ -1,65 +1,68 @@
-# biblio-plus
+# Biblio+
 
-Site de la bibliothèque municipale Biblio+ (Vue 3 + Vite).
+Site de la bibliothèque municipale Biblio+ (Vue 3 + Vite) : catalogue, recherche, favoris, fiche livre et formulaire de contact.
 
 - Site en ligne : https://biblio-plus-zjol.netlify.app
 - Dépôt : https://github.com/DanielleLynn-hub/biblio-plus
 - Cadrage et backlog : [docs/cadrage-et-backlog.md](docs/cadrage-et-backlog.md)
+- Audit et revue de code : [REVUE.md](REVUE.md)
 
-This template should help get you started developing with Vue 3 in Vite.
+## Fonctionnalités
 
-## Recommended IDE Setup
+- Accueil avec recherche et « coups de cœur », catalogue avec recherche, filtre par catégorie, tri et pagination.
+- Fiche détaillée d'un livre (`/livres/:id`), page 404, formulaire de contact validé et accessible.
+- Favoris conservés dans le navigateur, avec compteur dans le menu (`/favoris`).
+- Thème clair / sombre au choix de l'utilisateur (bouton dans l'en-tête, choix mémorisé ; par défaut, celui du navigateur).
+- Recherche complémentaire dans l'API publique [Open Library](https://openlibrary.org/dev/docs/api/search) depuis le catalogue (dès 3 lettres).
+- États de chargement (squelette), d'erreur (avec « Réessayer ») et de résultat vide.
+- Titre de l'onglet mis à jour à chaque page, pages chargées à la demande (lazy loading).
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Installation et commandes
 
 ```sh
 npm install
+npm run dev              # serveur de développement : http://localhost:5173
+npm run build            # version de production dans dist/
+npm run preview          # prévisualiser la version de production
+npm run test:unit        # tests unitaires (Vitest)
+npm run lint             # ESLint + Oxlint
+npm run storybook        # documentation des composants : http://localhost:6006
 ```
 
-### Compile and Hot-Reload for Development
+## Structure
+
+```
+src/
+  assets/       tokens.css (design tokens, thèmes) et base.css (remise à zéro, utilitaires)
+  components/   composants réutilisables (+ fichiers .stories.js)
+  composables/  useBooks, useFavorites, useTheme, useOpenLibrary
+  router/       routes et garde de navigation
+  views/        pages : Home, Catalogue, Book, Favorites, Contact, NotFound
+public/
+  data/books.json   catalogue de la bibliothèque (13 livres)
+  covers/           couvertures
+```
+
+## Storybook : documentation des composants
+
+[Storybook](https://storybook.js.org/) est un catalogue visuel des composants, séparé du site : il permet de voir chaque composant isolé, dans tous ses états, sans naviguer dans l'application. Il n'est pas déployé sur Netlify : c'est un outil de développement.
 
 ```sh
-npm run dev
+npm run storybook        # lance Storybook sur http://localhost:6006
+npm run build-storybook  # version statique dans storybook-static/ (ignorée par git)
 ```
 
-### Compile and Minify for Production
+Composants documentés : `BaseButton`, `BaseCard`, `BookCard`, `BookList`, `BookListSkeleton`, `SearchBar`.
 
-```sh
-npm run build
-```
+- Chaque composant a ses variantes (par exemple livre disponible, emprunté, en favori).
+- Le panneau « Controls » modifie les propriétés en direct ; l'onglet « Docs » liste automatiquement les propriétés, leurs types et valeurs par défaut.
+- Le sélecteur « Thème » de la barre d'outils bascule entre thème clair et sombre.
+- La configuration est dans `.storybook/` ; les histoires sont les fichiers `src/components/*.stories.js`. Un routeur factice y est installé pour les liens internes.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Accessibilité
 
-```sh
-npm run test:unit
-```
+Résultats des audits (Lighthouse mobile, axe DevTools) et corrections réalisées : voir [REVUE.md](REVUE.md).
 
-### Lint with [ESLint](https://eslint.org/)
+## Déploiement
 
-```sh
-npm run lint
-```
-
-## Storybook (documentation des composants)
-
-```sh
-npm run storybook        # http://localhost:6006
-npm run build-storybook  # version statique dans storybook-static/
-```
-
-Les composants documentés : BaseButton, BaseCard, BookCard, BookList, BookListSkeleton, SearchBar. La barre d'outils permet de basculer entre thème clair et sombre.
+Le site est redéployé automatiquement par Netlify à chaque `git push` sur `main`. Le fichier `public/_redirects` redirige toutes les URL vers `index.html` pour que `/catalogue` ou `/livres/3` fonctionnent en accès direct.
