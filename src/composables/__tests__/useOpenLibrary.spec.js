@@ -50,7 +50,7 @@ describe('useOpenLibrary', () => {
     expect(api.active.value).toBe(true)
     expect(api.loading.value).toBe(true)
 
-    await vi.advanceTimersByTimeAsync(500)
+    await vi.advanceTimersByTimeAsync(700)
     expect(fetchMock).toHaveBeenCalledOnce()
     expect(fetchMock.mock.calls[0][0]).toContain('q=germinal')
     expect(api.results.value).toHaveLength(1)
@@ -63,7 +63,7 @@ describe('useOpenLibrary', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: false, status: 503 }))
     const scope = effectScope()
     const api = scope.run(() => useOpenLibrary(ref('germinal')))
-    await vi.advanceTimersByTimeAsync(500)
+    await vi.advanceTimersByTimeAsync(700)
     expect(api.error.value).toMatch(/indisponible/)
     expect(api.results.value).toEqual([])
     scope.stop()

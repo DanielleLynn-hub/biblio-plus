@@ -3,7 +3,8 @@ import { ref, watch, onScopeDispose } from 'vue'
 const API = 'https://openlibrary.org/search.json'
 const FIELDS = 'key,title,author_name,first_publish_year,cover_i'
 const MIN_LENGTH = 3
-const DELAY_MS = 400
+const DELAY_MS = 600
+const TIMEOUT_MS = 15000
 const LIMIT = 8
 
 export function toBook(doc) {
@@ -32,20 +33,29 @@ export function useOpenLibrary(query) {
   async function search(q) {
     controller?.abort()
     controller = new AbortController()
+    let timedOut = false
+    const timeout = setTimeout(() => {
+      timedOut = true
+      controller.abort()
+    }, TIMEOUT_MS)
     loading.value = true
     error.value = null
     try {
-      const url = `${API}?q=${encodeURIComponent(q)}&limit=${LIMIT}&fields=${FIELDS}`
+      const url = `${API}?q=${encodeURIComponent(q)}&lang=fr&limit=${LIMIT}&fields=${FIELDS}`
       const res = await fetch(url, { signal: controller.signal })
       if (!res.ok) throw new Error('Erreur HTTP ' + res.status)
       const data = await res.json()
       results.value = data.docs.map(toBook)
       loading.value = false
     } catch (e) {
-      if (e.name === 'AbortError') return // remplacée par une recherche plus récente
-      error.value = 'Open Library est momentanément indisponible.'
+      if (e.name === 'AbortError' && !timedOut) return // remplacée par une recherche plus récente
+      error.value = timedOut
+        ? 'Open Library met trop de temps à répondre.'
+        : 'Open Library est momentanément indisponible.'
       results.value = []
       loading.value = false
+    } finally {
+      clearTimeout(timeout)
     }
   }
 

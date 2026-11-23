@@ -28,7 +28,7 @@ const { results, loading, error, active, retry } = useOpenLibrary(toRef(props, '
       <p>{{ error }}</p>
       <BaseButton @click="retry">Réessayer</BaseButton>
     </div>
-    <p v-else-if="!results.length" role="status">Aucun ouvrage trouvé sur Open Library.</p>
+    <p v-else-if="!results.length" role="status">Aucun ouvrage trouvé sur Open Library. Vérifiez l’orthographe : la recherche ne corrige pas les fautes de frappe.</p>
     <ul v-else class="ol__list">
       <li v-for="book in results" :key="book.id">
         <BaseCard>
