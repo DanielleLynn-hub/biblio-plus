@@ -5,6 +5,7 @@ import { useFavorites } from '@/composables/useFavorites'
 import BookList from '@/components/BookList.vue'
 import BookListSkeleton from '@/components/BookListSkeleton.vue'
 import BaseButton from '@/components/BaseButton.vue'
+import OpenLibraryResults from '@/components/OpenLibraryResults.vue'
 
 const { books, loading, error, load } = useBooks()
 onMounted(load)
@@ -75,6 +76,8 @@ watch([query, category, sort], () => (page.value = 1))
         <BaseButton variant="ghost" :disabled="page === pageCount" @click="page++">Suivant</BaseButton>
       </nav>
     </template>
+
+    <OpenLibraryResults :query="query" />
   </div>
 </template>
 
