@@ -1,3 +1,8 @@
+<script setup>
+import { useFavorites } from '@/composables/useFavorites'
+const { count } = useFavorites()
+</script>
+
 <template>
   <header class="app-header">
     <RouterLink to="/" class="app-header__logo">Biblio+</RouterLink>
@@ -5,6 +10,7 @@
       <ul class="app-header__nav">
         <li><RouterLink to="/">Accueil</RouterLink></li>
         <li><RouterLink to="/catalogue">Catalogue</RouterLink></li>
+        <li><RouterLink to="/favoris">Favoris ({{ count }})</RouterLink></li>
         <li><RouterLink to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>

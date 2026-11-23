@@ -1,24 +1,19 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useBooks } from '@/composables/useBooks'
+import { useFavorites } from '@/composables/useFavorites'
 import SearchBar from '@/components/SearchBar.vue'
 import BookList from '@/components/BookList.vue'
 
 const { books, loading, error, load } = useBooks()
 const query = ref('')
-const favorites = ref([])
+const { favorites, toggle: toggleFavorite } = useFavorites()
 
 const featured = computed(() =>
   books.value
     .filter((b) => (b.title + ' ' + b.author).toLowerCase().includes(query.value.trim().toLowerCase()))
     .slice(0, 8),
 )
-
-function toggleFavorite(id) {
-  favorites.value = favorites.value.includes(id)
-    ? favorites.value.filter((f) => f !== id)
-    : [...favorites.value, id]
-}
 
 onMounted(load)
 </script>

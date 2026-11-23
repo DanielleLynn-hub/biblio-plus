@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue'
 import { useBooks } from '@/composables/useBooks'
+import { useFavorites } from '@/composables/useFavorites'
 import BookList from '@/components/BookList.vue'
 import BaseButton from '@/components/BaseButton.vue'
 
@@ -11,7 +12,7 @@ const query = ref('')
 const category = ref('')
 const sort = ref('title')
 const page = ref(1)
-const favorites = ref([])
+const { favorites, toggle: toggleFavorite } = useFavorites()
 const PER_PAGE = 8
 
 const categories = computed(() => [...new Set(books.value.map((b) => b.category))])
@@ -30,12 +31,6 @@ const visible = computed(() =>
 )
 
 watch([query, category, sort], () => (page.value = 1))
-
-function toggleFavorite(id) {
-  favorites.value = favorites.value.includes(id)
-    ? favorites.value.filter((f) => f !== id)
-    : [...favorites.value, id]
-}
 </script>
 
 <template>

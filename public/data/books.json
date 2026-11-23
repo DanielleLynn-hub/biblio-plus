@@ -6,7 +6,7 @@
     "category": "Roman",
     "year": 1943,
     "available": true,
-    "cover": "/covers/petit-prince.jpg",
+    "cover": "/covers/petit-prince.svg",
     "summary": "Un aviateur échoué dans le désert rencontre un petit prince."
   },
   {
@@ -16,7 +16,7 @@
     "category": "Roman",
     "year": 1885,
     "available": false,
-    "cover": "/covers/germinal.jpg",
+    "cover": "/covers/germinal.svg",
     "summary": "La vie et la révolte des mineurs dans le nord de la France."
   },
   {
@@ -26,7 +26,7 @@
     "category": "Roman",
     "year": 1862,
     "available": true,
-    "cover": "/covers/les-miserables.jpg",
+    "cover": "/covers/les-miserables.svg",
     "summary": "Le destin de Jean Valjean, ancien forçat en quête de rédemption."
   },
   {
@@ -36,7 +36,7 @@
     "category": "Roman",
     "year": 1942,
     "available": true,
-    "cover": "/covers/etranger.jpg",
+    "cover": "/covers/etranger.svg",
     "summary": "Meursault, un homme indifférent, est jugé pour un meurtre à Alger."
   },
   {
@@ -46,7 +46,7 @@
     "category": "Jeunesse",
     "year": 1997,
     "available": false,
-    "cover": "/covers/harry-potter.jpg",
+    "cover": "/covers/harry-potter.svg",
     "summary": "Un orphelin découvre qu'il est un sorcier et entre à Poudlard."
   },
   {
@@ -56,7 +56,7 @@
     "category": "Jeunesse",
     "year": 1960,
     "available": true,
-    "cover": "/covers/petit-nicolas.jpg",
+    "cover": "/covers/petit-nicolas.svg",
     "summary": "Les bêtises et les aventures d'un écolier et de ses copains."
   },
   {
@@ -66,7 +66,7 @@
     "category": "Jeunesse",
     "year": 1988,
     "available": true,
-    "cover": "/covers/matilda.jpg",
+    "cover": "/covers/matilda.svg",
     "summary": "Une fillette surdouée aux pouvoirs surprenants affronte la terrible directrice."
   },
   {
@@ -76,7 +76,7 @@
     "category": "Jeunesse",
     "year": 1971,
     "available": false,
-    "cover": "/covers/vendredi.jpg",
+    "cover": "/covers/vendredi.svg",
     "summary": "Une réécriture de Robinson Crusoé destinée aux jeunes lecteurs."
   },
   {
@@ -86,7 +86,7 @@
     "category": "Documentaire",
     "year": 2011,
     "available": true,
-    "cover": "/covers/sapiens.jpg",
+    "cover": "/covers/sapiens.svg",
     "summary": "Une histoire de l'espèce humaine, des chasseurs-cueilleurs à nos jours."
   },
   {
@@ -96,7 +96,7 @@
     "category": "Documentaire",
     "year": 1988,
     "available": true,
-    "cover": "/covers/histoire-du-temps.jpg",
+    "cover": "/covers/histoire-du-temps.svg",
     "summary": "Une introduction accessible à la cosmologie et aux trous noirs."
   },
   {
@@ -106,7 +106,7 @@
     "category": "Documentaire",
     "year": 1949,
     "available": false,
-    "cover": "/covers/deuxieme-sexe.jpg",
+    "cover": "/covers/deuxieme-sexe.svg",
     "summary": "Essai fondateur sur la condition des femmes."
   },
   {
@@ -116,7 +116,7 @@
     "category": "Documentaire",
     "year": 1951,
     "available": true,
-    "cover": "/covers/totalitarisme.jpg",
+    "cover": "/covers/totalitarisme.svg",
     "summary": "Analyse de l'antisémitisme, de l'impérialisme et des régimes totalitaires."
   }
 ]

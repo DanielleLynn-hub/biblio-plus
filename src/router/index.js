@@ -7,6 +7,7 @@ export default createRouter({
     { path: '/', name: 'home', component: HomeView },
     { path: '/catalogue', name: 'catalogue', component: () => import('@/views/CatalogueView.vue') },
     { path: '/livres/:id', name: 'book', props: true, component: () => import('@/views/BookView.vue') },
+    { path: '/favoris', name: 'favorites', component: () => import('@/views/FavoritesView.vue') },
     { path: '/contact', name: 'contact', component: () => import('@/views/ContactView.vue') },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },
   ],
