@@ -13,7 +13,23 @@
 - Statut de disponibilité en texte + icône (pas seulement la couleur).
 - Focus visible global (`:focus-visible`), texte d'or écarté pour contraste insuffisant.
 
+## Audit (accueil, mobile)
+
+| Outil | Résultat |
+| --- | --- |
+| Lighthouse Performance | 62 → 89 (couvertures converties en WebP 480 px) |
+| Lighthouse Accessibilité | 92 → 100 |
+| Lighthouse Bonnes pratiques | 100 |
+| Lighthouse SEO | 83 → 92 (titre, `lang="fr"`, meta description) |
+
+axe DevTools : 2 problèmes « guidés » sur le champ de recherche de l'accueil.
+
+1. *Visible label missing* (grave) : le libellé n'était visible que pour les lecteurs d'écran. **Corrigé** : libellé « Rechercher un livre » désormais visible au-dessus du champ.
+2. *Required field missing aria-required* (modéré, bonne pratique) : question guidée, le champ n'est pas obligatoire. **Ignoré** (faux positif).
+
+Autre correction : menu de l'en-tête coupé sur mobile, maintenant à la ligne.
+
 ## À faire
 
-- Relever les scores Lighthouse (4 catégories, mobile) et le détail des violations axe DevTools dans le navigateur.
-- Fournir les images de `public/covers/` (actuellement absentes : fond uni + texte alternatif).
+- Revue croisée : noter ici 3 remarques d'un autre binôme.
+- Scanner axe sur `/catalogue` et `/contact`.
