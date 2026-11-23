@@ -1,5 +1,6 @@
 <script setup>
 import { useFavorites } from '@/composables/useFavorites'
+import ThemeToggle from './ThemeToggle.vue'
 const { count } = useFavorites()
 </script>
 
@@ -14,6 +15,7 @@ const { count } = useFavorites()
         <li><RouterLink to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
+    <ThemeToggle />
   </header>
 </template>
 

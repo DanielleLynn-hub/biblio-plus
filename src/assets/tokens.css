@@ -1,6 +1,6 @@
 /* Design tokens : palette sobre, rose / lavande / corail en touches */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --color-bg: #fbeaf0; /* rose très clair, dérivé de #f5d5e0 */
   --color-surface: #ffffff;
   --color-brand: #f5d5e0; /* rose : bandeau d'accueil */
@@ -39,24 +39,23 @@
   --shadow: 0 1px 3px rgba(43, 29, 58, 0.08), 0 6px 18px rgba(43, 29, 58, 0.06);
 }
 
-/* Thème sombre selon la préférence du système */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #17111f;
-    --color-surface: #231a30;
-    --color-ink: #100b17;
-    --color-ink-soft: #3a2d5c;
-    --color-primary: #c8bdee;
-    --color-primary-contrast: #17111f;
-    --color-tint: #2e2340;
-    --color-text: #f3e8ee;
-    --color-muted: #c9bcd3;
-    --color-border: #3b2e4d;
-    --color-success: #7fe0bd;
-    --color-success-bg: #17332b;
-    --color-danger: #ff9a94;
-    --color-danger-bg: #3d1f22;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-    --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.5);
-  }
+/* Thème sombre : choisi par l'utilisateur (par défaut, celui du système) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #17111f;
+  --color-surface: #231a30;
+  --color-ink: #100b17;
+  --color-ink-soft: #3a2d5c;
+  --color-primary: #c8bdee;
+  --color-primary-contrast: #17111f;
+  --color-tint: #2e2340;
+  --color-text: #f3e8ee;
+  --color-muted: #c9bcd3;
+  --color-border: #3b2e4d;
+  --color-success: #7fe0bd;
+  --color-success-bg: #17332b;
+  --color-danger: #ff9a94;
+  --color-danger-bg: #3d1f22;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.5);
 }
