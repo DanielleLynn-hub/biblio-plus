@@ -18,8 +18,7 @@ const { count } = useFavorites()
 </template>
 
 <style scoped>
-.app-header { position: sticky; top: 0; z-index: 20; height: var(--header-h);
-  display: flex; justify-content: space-between; align-items: center;
+.app-header { display: flex; justify-content: space-between; align-items: center;
   padding: var(--space-4) var(--gutter); background: var(--color-ink); color: var(--color-on-ink);
   border-bottom: 3px solid var(--color-accent); }
 .app-header a { color: inherit; text-decoration: none; }
