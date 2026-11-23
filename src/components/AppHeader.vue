@@ -19,11 +19,11 @@ const { count } = useFavorites()
 
 <style scoped>
 .app-header { display: flex; justify-content: space-between; align-items: center;
-  padding: var(--space-4) var(--space-6); background: var(--color-primary);
-  color: var(--color-primary-contrast); border-bottom: 4px solid var(--color-accent); }
+  padding: var(--space-4) var(--space-6); background: var(--color-brand);
+  color: var(--color-on-brand); border-bottom: 4px solid var(--color-accent); }
 .app-header a { color: inherit; text-decoration: none; }
 .app-header__logo { font-family: var(--font-title); font-size: var(--fs-600); font-weight: 700; }
 .app-header__nav { display: flex; gap: var(--space-4); list-style: none; margin: 0; padding: 0; }
 .app-header__nav a.router-link-active { font-weight: 700; border-bottom: 2px solid currentColor; }
-.app-header :focus-visible { outline-color: var(--color-primary-contrast); }
+.app-header :focus-visible { outline-color: var(--color-on-brand); }
 </style>

@@ -1,15 +1,17 @@
-/* Design tokens issus de la maquette (style chaleureux « bibliothèque ») */
+/* Design tokens : palette rose / lavande / corail */
 :root {
-  --color-primary: #7a1f2b; /* bordeaux */
-  --color-primary-contrast: #fbf5ea;
-  --color-accent: #b8872b; /* or : décoratif uniquement (contraste insuffisant pour du texte) */
+  --color-brand: #ab9fc9; /* lavande : en-tête, bandeau, pied de page */
+  --color-on-brand: #2b1d3a;
+  --color-primary: #5b4b8a; /* violet profond, dérivé de la lavande : boutons, liens, focus (contraste AA) */
+  --color-primary-contrast: #ffffff;
+  --color-accent: #eb9392; /* corail : filets décoratifs */
   --color-surface: #ffffff;
-  --color-bg: #fbf5ea; /* crème */
-  --color-text: #2b1d1a;
-  --color-muted: #6b5a55;
-  --color-border: #e3d6c0;
-  --color-success: #1f6f54;
-  --color-danger: #b3261e;
+  --color-bg: #f5d5e0; /* rose */
+  --color-text: #2b1d3a;
+  --color-muted: #594a66;
+  --color-border: #e6c2d1;
+  --color-success: #17604a;
+  --color-danger: #a11f18;
 
   --font-base: Arial, Helvetica, sans-serif;
   --font-title: Georgia, 'Times New Roman', serif;
@@ -24,5 +26,5 @@
   --space-6: 1.5rem;
   --space-8: 2rem;
   --radius: 0.75rem;
-  --shadow: 0 2px 8px rgba(43, 29, 26, 0.12);
+  --shadow: 0 2px 8px rgba(43, 29, 58, 0.15);
 }
