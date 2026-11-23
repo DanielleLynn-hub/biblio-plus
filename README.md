@@ -4,6 +4,7 @@ Site de la bibliothèque municipale Biblio+ (Vue 3 + Vite) : catalogue, recherch
 
 - Site en ligne : https://biblio-plus-zjol.netlify.app
 - Dépôt : https://github.com/DanielleLynn-hub/biblio-plus
+- Storybook en ligne : https://biblio-plus-zjol.netlify.app/storybook/
 - Cadrage et backlog : [docs/cadrage-et-backlog.md](docs/cadrage-et-backlog.md)
 - Audit et revue de code : [REVUE.md](REVUE.md)
 
@@ -27,6 +28,7 @@ npm run preview          # prévisualiser la version de production
 npm run test:unit        # tests unitaires (Vitest)
 npm run lint             # ESLint + Oxlint
 npm run storybook        # documentation des composants : http://localhost:6006
+npm run build:netlify    # site + Storybook (dist/storybook), comme sur Netlify
 ```
 
 ## Structure
@@ -45,7 +47,7 @@ public/
 
 ## Storybook : documentation des composants
 
-[Storybook](https://storybook.js.org/) est un catalogue visuel des composants, séparé du site : il permet de voir chaque composant isolé, dans tous ses états, sans naviguer dans l'application. Il n'est pas déployé sur Netlify : c'est un outil de développement.
+[Storybook](https://storybook.js.org/) est un catalogue visuel des composants, séparé du site : il permet de voir chaque composant isolé, dans tous ses états, sans naviguer dans l'application. Il est publié en ligne avec le site : https://biblio-plus-zjol.netlify.app/storybook/ (construit par Netlify via `netlify.toml` et `npm run build:netlify`).
 
 ```sh
 npm run storybook        # lance Storybook sur http://localhost:6006

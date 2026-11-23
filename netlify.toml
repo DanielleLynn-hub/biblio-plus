@@ -1,0 +1,7 @@
+# Netlify : construit le site puis Storybook, publié sous /storybook/
+[build]
+  command = "npm run build:netlify"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
