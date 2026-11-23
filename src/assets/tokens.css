@@ -1,0 +1,28 @@
+/* Design tokens issus de la maquette (style chaleureux « bibliothèque ») */
+:root {
+  --color-primary: #7a1f2b; /* bordeaux */
+  --color-primary-contrast: #fbf5ea;
+  --color-accent: #b8872b; /* or : décoratif uniquement (contraste insuffisant pour du texte) */
+  --color-surface: #ffffff;
+  --color-bg: #fbf5ea; /* crème */
+  --color-text: #2b1d1a;
+  --color-muted: #6b5a55;
+  --color-border: #e3d6c0;
+  --color-success: #1f6f54;
+  --color-danger: #b3261e;
+
+  --font-base: Arial, Helvetica, sans-serif;
+  --font-title: Georgia, 'Times New Roman', serif;
+  --fs-300: 1.125rem;
+  --fs-400: 1rem;
+  --fs-600: 1.75rem;
+  --fs-800: 2.5rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --radius: 0.75rem;
+  --shadow: 0 2px 8px rgba(43, 29, 26, 0.12);
+}

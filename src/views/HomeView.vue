@@ -1,10 +1,48 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { ref, computed, onMounted } from 'vue'
+import { useBooks } from '@/composables/useBooks'
+import SearchBar from '@/components/SearchBar.vue'
+import BookList from '@/components/BookList.vue'
+
+const { books, loading, error, load } = useBooks()
+const query = ref('')
+const favorites = ref([])
+
+const featured = computed(() =>
+  books.value
+    .filter((b) => (b.title + ' ' + b.author).toLowerCase().includes(query.value.trim().toLowerCase()))
+    .slice(0, 8),
+)
+
+function toggleFavorite(id) {
+  favorites.value = favorites.value.includes(id)
+    ? favorites.value.filter((f) => f !== id)
+    : [...favorites.value, id]
+}
+
+onMounted(load)
 </script>
 
 <template>
-  <main>
-    <h2>Bienvenue sur Biblio+</h2>
-    <TheWelcome />
-  </main>
+  <section class="hero">
+    <h1>Bienvenue à la bibliothèque</h1>
+    <p>Trouvez un livre en quelques secondes et vérifiez s’il est disponible avant de venir.</p>
+    <SearchBar v-model="query" />
+  </section>
+  <section class="page" aria-labelledby="coeur">
+    <h2 id="coeur">Coups de cœur</h2>
+    <p v-if="loading" role="status">Chargement…</p>
+    <div v-else-if="error" role="alert">
+      <p>{{ error }}</p>
+      <button type="button" @click="load">Réessayer</button>
+    </div>
+    <p v-else-if="!featured.length">Aucun résultat.</p>
+    <BookList v-else :books="featured" :favorites="favorites" @toggle-favorite="toggleFavorite" />
+  </section>
 </template>
+
+<style scoped>
+.hero { padding: var(--space-8) var(--space-6); background: var(--color-primary);
+  color: var(--color-primary-contrast); }
+.hero h1 { font-size: var(--fs-800); margin: 0 0 var(--space-2); }
+</style>
