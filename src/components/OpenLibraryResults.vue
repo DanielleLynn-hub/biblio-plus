@@ -12,7 +12,7 @@ const { results, loading, error, active, retry } = useOpenLibrary(toRef(props, '
 </script>
 
 <template>
-  <section v-if="active" class="ol" aria-labelledby="ol-title">
+  <section class="ol" aria-labelledby="ol-title">
     <h2 id="ol-title">Aussi sur Open Library</h2>
     <p class="ol__note">
       Ces ouvrages viennent du catalogue mondial
@@ -20,7 +20,10 @@ const { results, loading, error, active, retry } = useOpenLibrary(toRef(props, '
       (nouvel onglet) et ne sont pas forcément disponibles à la bibliothèque.
     </p>
 
-    <p v-if="loading" role="status">Recherche sur Open Library…</p>
+    <p v-if="!active" class="ol__hint">
+      Tapez au moins 3 lettres dans la recherche du catalogue pour chercher aussi parmi les ouvrages d’Open Library.
+    </p>
+    <p v-else-if="loading" role="status">Recherche sur Open Library…</p>
     <div v-else-if="error" role="alert">
       <p>{{ error }}</p>
       <BaseButton @click="retry">Réessayer</BaseButton>
@@ -47,6 +50,7 @@ const { results, loading, error, active, retry } = useOpenLibrary(toRef(props, '
 
 <style scoped>
 .ol { margin-top: var(--space-8); }
+.ol__hint { padding: var(--space-4); background: var(--color-tint); border-radius: var(--radius); }
 .ol__note { color: var(--color-muted); max-width: 40rem; }
 .ol__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4);
   grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); }

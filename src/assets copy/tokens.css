@@ -1,0 +1,61 @@
+/* Design tokens : palette sobre, rose / lavande / corail en touches */
+:root {
+  color-scheme: light;
+  --color-bg: #fbeaf0; /* rose très clair, dérivé de #f5d5e0 */
+  --color-surface: #ffffff;
+  --color-brand: #f5d5e0; /* rose : bandeau d'accueil */
+  --color-on-brand: #2b1d3a;
+  --color-ink: #2b1d3a; /* prune très sombre : texte, pied de page */
+  --color-on-ink: #f5d5e0;
+  --color-ink-soft: #4a3b75; /* dégradé du bandeau */
+  --color-primary: #4a3b75; /* prune : boutons, liens, focus (contraste AA) */
+  --color-primary-contrast: #ffffff;
+  --color-lavender: #ab9fc9; /* décoratif */
+  --color-tint: #ece7f6; /* lavande pâle : fond des couvertures */
+  --color-accent: #eb9392; /* corail : filets et soulignements */
+  --color-text: #2b1d3a;
+  --color-muted: #594a66;
+  --color-border: #efcfdc;
+  --color-success: #17604a;
+  --color-danger: #a11f18;
+  --color-success-bg: #e1f1ea;
+  --color-danger-bg: #fbe1df;
+
+  --font-base: Arial, Helvetica, sans-serif;
+  --font-title: Georgia, 'Times New Roman', serif;
+  --fs-300: 1.125rem;
+  --fs-400: 1rem;
+  --fs-600: 1.75rem;
+  --fs-800: 2.5rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --radius: 0.75rem;
+  --gutter: max(var(--space-6), calc((100% - 70rem) / 2 + var(--space-6)));
+  --shadow-hover: 0 10px 28px rgba(43, 29, 58, 0.16);
+  --shadow: 0 1px 3px rgba(43, 29, 58, 0.08), 0 6px 18px rgba(43, 29, 58, 0.06);
+}
+
+/* Thème sombre : choisi par l'utilisateur (par défaut, celui du système) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #17111f;
+  --color-surface: #231a30;
+  --color-ink: #100b17;
+  --color-ink-soft: #3a2d5c;
+  --color-primary: #c8bdee;
+  --color-primary-contrast: #17111f;
+  --color-tint: #2e2340;
+  --color-text: #f3e8ee;
+  --color-muted: #c9bcd3;
+  --color-border: #3b2e4d;
+  --color-success: #7fe0bd;
+  --color-success-bg: #17332b;
+  --color-danger: #ff9a94;
+  --color-danger-bg: #3d1f22;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
