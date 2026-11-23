@@ -30,9 +30,9 @@ const emit = defineEmits(['toggle-favorite'])
 
 <style scoped>
 .book-card { background: var(--color-surface); border-radius: var(--radius);
-  box-shadow: var(--shadow); overflow: hidden; height: 100%; }
+  box-shadow: var(--shadow); border: 1px solid var(--color-border); overflow: hidden; height: 100%; }
 .book-card__cover { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: contain;
-  background: var(--color-border); }
+  padding: var(--space-4); background: var(--color-tint); }
 .book-card__body { padding: var(--space-4); }
 .book-card__title { margin: 0 0 var(--space-1); font-size: var(--fs-300); }
 .book-card__author, .book-card__meta { margin: 0; color: var(--color-muted); }

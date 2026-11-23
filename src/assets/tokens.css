@@ -1,15 +1,19 @@
-/* Design tokens : palette rose / lavande / corail */
+/* Design tokens : palette sobre, rose / lavande / corail en touches */
 :root {
-  --color-brand: #ab9fc9; /* lavande : en-tête, bandeau, pied de page */
-  --color-on-brand: #2b1d3a;
-  --color-primary: #5b4b8a; /* violet profond, dérivé de la lavande : boutons, liens, focus (contraste AA) */
-  --color-primary-contrast: #ffffff;
-  --color-accent: #eb9392; /* corail : filets décoratifs */
+  --color-bg: #fdf8fa; /* blanc rosé très léger */
   --color-surface: #ffffff;
-  --color-bg: #f5d5e0; /* rose */
+  --color-brand: #f5d5e0; /* rose : bandeau d'accueil */
+  --color-on-brand: #2b1d3a;
+  --color-ink: #2b1d3a; /* prune très sombre : texte, pied de page */
+  --color-on-ink: #f5d5e0;
+  --color-primary: #4a3b75; /* prune : boutons, liens, focus (contraste AA) */
+  --color-primary-contrast: #ffffff;
+  --color-lavender: #ab9fc9; /* décoratif */
+  --color-tint: #f3f0f8; /* lavande très pâle : fond des couvertures */
+  --color-accent: #eb9392; /* corail : filets et soulignements */
   --color-text: #2b1d3a;
   --color-muted: #594a66;
-  --color-border: #e6c2d1;
+  --color-border: #eadce3;
   --color-success: #17604a;
   --color-danger: #a11f18;
 
@@ -25,6 +29,6 @@
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
-  --radius: 0.75rem;
-  --shadow: 0 2px 8px rgba(43, 29, 58, 0.15);
+  --radius: 0.5rem;
+  --shadow: 0 1px 3px rgba(43, 29, 58, 0.08), 0 6px 18px rgba(43, 29, 58, 0.06);
 }

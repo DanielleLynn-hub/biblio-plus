@@ -37,7 +37,7 @@ onMounted(load)
 </template>
 
 <style scoped>
-.hero { padding: var(--space-8) var(--space-6); background: var(--color-brand);
+.hero { padding: var(--space-8) var(--space-8) calc(var(--space-8) * 1.5); background: var(--color-brand);
   color: var(--color-on-brand); }
 .hero h1 { font-size: var(--fs-800); margin: 0 0 var(--space-2); }
 </style>

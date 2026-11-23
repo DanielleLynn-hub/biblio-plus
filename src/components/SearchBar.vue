@@ -11,5 +11,5 @@ const model = defineModel({ type: String, default: '' })
 
 <style scoped>
 .search__input { width: 100%; max-width: 32rem; font: inherit; padding: var(--space-2) var(--space-4);
-  border: 2px solid var(--color-primary); border-radius: var(--radius); background: var(--color-surface); }
+  border: 1px solid var(--color-muted); border-radius: var(--radius); background: var(--color-surface); }
 </style>
