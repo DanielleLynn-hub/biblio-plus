@@ -6,7 +6,7 @@
     "category": "Roman",
     "year": 1943,
     "available": true,
-    "cover": "/covers/petit-prince.png",
+    "cover": "/covers/petit-prince.webp",
     "summary": "Un aviateur échoué dans le désert rencontre un petit prince."
   },
   {
@@ -16,7 +16,7 @@
     "category": "Roman",
     "year": 1885,
     "available": false,
-    "cover": "/covers/germinal.png",
+    "cover": "/covers/germinal.webp",
     "summary": "La vie et la révolte des mineurs dans le nord de la France."
   },
   {
@@ -26,7 +26,7 @@
     "category": "Roman",
     "year": 1862,
     "available": true,
-    "cover": "/covers/les-miserables.png",
+    "cover": "/covers/les-miserables.webp",
     "summary": "Le destin de Jean Valjean, ancien forçat en quête de rédemption."
   },
   {
@@ -36,7 +36,7 @@
     "category": "Roman",
     "year": 1942,
     "available": true,
-    "cover": "/covers/etranger.png",
+    "cover": "/covers/etranger.webp",
     "summary": "Meursault, un homme indifférent, est jugé pour un meurtre à Alger."
   },
   {
@@ -46,7 +46,7 @@
     "category": "Jeunesse",
     "year": 1997,
     "available": false,
-    "cover": "/covers/harry-potter.png",
+    "cover": "/covers/harry-potter.webp",
     "summary": "Un orphelin découvre qu'il est un sorcier et entre à Poudlard."
   },
   {
@@ -56,7 +56,7 @@
     "category": "Jeunesse",
     "year": 1960,
     "available": true,
-    "cover": "/covers/petit-nicolas.png",
+    "cover": "/covers/petit-nicolas.webp",
     "summary": "Les bêtises et les aventures d'un écolier et de ses copains."
   },
   {
@@ -66,7 +66,7 @@
     "category": "Jeunesse",
     "year": 1988,
     "available": true,
-    "cover": "/covers/matilda.png",
+    "cover": "/covers/matilda.webp",
     "summary": "Une fillette surdouée aux pouvoirs surprenants affronte la terrible directrice."
   },
   {
@@ -76,7 +76,7 @@
     "category": "Jeunesse",
     "year": 1971,
     "available": false,
-    "cover": "/covers/vendredi.png",
+    "cover": "/covers/vendredi.webp",
     "summary": "Une réécriture de Robinson Crusoé destinée aux jeunes lecteurs."
   },
   {
@@ -86,7 +86,7 @@
     "category": "Documentaire",
     "year": 2011,
     "available": true,
-    "cover": "/covers/sapiens.png",
+    "cover": "/covers/sapiens.webp",
     "summary": "Une histoire de l'espèce humaine, des chasseurs-cueilleurs à nos jours."
   },
   {
@@ -96,7 +96,7 @@
     "category": "Documentaire",
     "year": 1988,
     "available": true,
-    "cover": "/covers/histoire-du-temps.png",
+    "cover": "/covers/histoire-du-temps.webp",
     "summary": "Une introduction accessible à la cosmologie et aux trous noirs."
   },
   {
@@ -106,7 +106,7 @@
     "category": "Documentaire",
     "year": 1949,
     "available": false,
-    "cover": "/covers/deuxieme-sexe.png",
+    "cover": "/covers/deuxieme-sexe.webp",
     "summary": "Essai fondateur sur la condition des femmes."
   },
   {
@@ -116,7 +116,7 @@
     "category": "Documentaire",
     "year": 1951,
     "available": true,
-    "cover": "/covers/totalitarisme.png",
+    "cover": "/covers/totalitarisme.webp",
     "summary": "Analyse de l'antisémitisme, de l'impérialisme et des régimes totalitaires."
   },
   {
@@ -126,7 +126,7 @@
     "category": "Documentaire",
     "year": 1949,
     "available": true,
-    "cover": "/covers/deuxieme-sexe-2.png",
+    "cover": "/covers/deuxieme-sexe-2.webp",
     "summary": "Tome II : « L'expérience vécue », où Simone de Beauvoir analyse la condition des femmes à chaque étape de leur vie."
   }
 ]

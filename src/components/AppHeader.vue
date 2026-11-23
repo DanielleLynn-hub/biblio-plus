@@ -29,4 +29,8 @@ const { count } = useFavorites()
 .app-header__nav a:hover { border-bottom-color: var(--color-lavender); }
 .app-header__nav a.router-link-exact-active { font-weight: 700; color: #ffffff; border-bottom-color: var(--color-accent); }
 .app-header :focus-visible { outline-color: var(--color-on-ink); }
+@media (max-width: 40rem) {
+  .app-header { height: auto; flex-direction: column; gap: var(--space-2); padding-block: var(--space-2); }
+  .app-header__nav { gap: var(--space-4); flex-wrap: wrap; justify-content: center; }
+}
 </style>
