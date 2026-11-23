@@ -22,7 +22,7 @@
 | Lighthouse Bonnes pratiques | 100 |
 | Lighthouse SEO | 83 → 92 (titre, `lang="fr"`, meta description) |
 
-axe DevTools : 2 problèmes « guidés » sur le champ de recherche de l'accueil.
+axe DevTools (WCAG 2.1 AA, bonnes pratiques activées) : 0 problème détecté automatiquement ; tests guidés Clavier, Structure, Images, Tableaux, Éléments interactifs et Dialogues : 0 problème ; Formulaires : 2 problèmes « guidés » sur le champ de recherche de l'accueil.
 
 1. *Visible label missing* (grave) : le libellé n'était visible que pour les lecteurs d'écran. **Corrigé** : libellé « Rechercher un livre » désormais visible au-dessus du champ.
 2. *Required field missing aria-required* (modéré, bonne pratique) : question guidée, le champ n'est pas obligatoire. **Ignoré** (faux positif).
