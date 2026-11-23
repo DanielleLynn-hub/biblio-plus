@@ -66,6 +66,7 @@ watch([query, category, sort], () => (page.value = 1))
     </div>
     <p v-else-if="!filtered.length" role="status">Aucun résultat.</p>
     <template v-else>
+      <h2 class="sr-only">Résultats</h2>
       <BookList :books="visible" :favorites="favorites" @toggle-favorite="toggleFavorite" />
       <nav class="catalogue__pagination" aria-label="Pagination">
         <BaseButton variant="ghost" :disabled="page === 1" @click="page--">Précédent</BaseButton>

@@ -24,6 +24,9 @@ onMounted(load)
       <p role="status">Vous n’avez pas encore de favoris.</p>
       <BaseButton to="/catalogue">Parcourir le catalogue</BaseButton>
     </div>
-    <BookList v-else :books="favoriteBooks" :favorites="favorites" @toggle-favorite="toggle" />
+    <div v-else>
+      <h2 class="sr-only">Livres favoris</h2>
+      <BookList :books="favoriteBooks" :favorites="favorites" @toggle-favorite="toggle" />
+    </div>
   </div>
 </template>
