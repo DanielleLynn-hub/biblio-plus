@@ -14,7 +14,7 @@
     "format": "prettier --write --experimental-cli src/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:netlify": "npm run build && storybook build -o dist/storybook"
+    "build:netlify": "npm run build && (storybook build -o dist/storybook || echo \"Storybook non construit : site publie sans\")"
   },
   "dependencies": {
     "pinia": "^4.0.3",
